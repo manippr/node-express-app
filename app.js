@@ -37,12 +37,6 @@ hbs.registerHelper('getCurrentYear', () => {
 });
 
 app.get('/',(req,res) => {
-  //res.send('<h1>Hello Express</h1>');
-  // res.send({
-  //   name : 'Mani R',
-  //   age : 29,
-  //   city : 'bengaluru'
-  // });
   res.render('home.hbs',{
     title : 'Welcome to home page',
     sampleText : 'This is a sample text provided in the home page'
@@ -55,6 +49,12 @@ app.get('/about',(req,res) => {
   res.render('about.hbs',{
     title : 'About Page'
   });
+});
+
+app.get('/project',(req,res) => {
+  res.render('project.hbs',{
+    title : 'Projects'
+  })
 });
 
 
